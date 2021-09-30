@@ -1,0 +1,100 @@
+2021-09-19 00:04:17.714  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:09:17.732  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:13:52.220  INFO [user-albums,b1f23dda54b19547,3a313997dc25c7f6] 17760 --- [http-nio-auto-1-exec-1] c.u.albums.controller.AlbumsController   : Returning 2 albums
+2021-09-19 00:13:53.758  WARN [user-albums,,] 17760 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2021-09-19 00:13:53.763  WARN [user-albums,,] 17760 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect timed out; nested exception is java.net.SocketTimeoutException: Connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect timed out; nested exception is java.net.SocketTimeoutException: Connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.0.3.jar:3.0.3]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.0.3.jar:3.0.3]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.0.3.jar:3.0.3]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.0.3.jar:3.0.3]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.9.jar:5.3.9]
+	... 9 common frames omitted
+
+2021-09-19 00:14:17.736  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:19:17.744  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:24:17.758  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:29:17.765  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:34:17.780  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:39:17.792  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:44:17.794  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:49:17.809  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:54:17.812  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 00:59:17.818  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:04:17.827  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:09:17.837  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:14:17.853  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:19:17.858  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:20:30.110  INFO [user-albums,,] 17760 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-ALBUMS with eureka with status DOWN
+2021-09-19 01:20:30.111  INFO [user-albums,,] 17760 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1631994630111, current=DOWN, previous=UP]
+2021-09-19 01:20:30.112  INFO [user-albums,,] 17760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-ALBUMS/user-albums:e67be9928128d5f2733ff2715b54f813: registering service...
+2021-09-19 01:20:30.120  INFO [user-albums,,] 17760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-ALBUMS/user-albums:e67be9928128d5f2733ff2715b54f813 - registration status: 204
+2021-09-19 01:20:31.226  INFO [user-albums,,] 17760 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2021-09-19 01:20:34.240  INFO [user-albums,,] 17760 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2021-09-19 01:20:34.244  INFO [user-albums,,] 17760 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-ALBUMS/user-albums:e67be9928128d5f2733ff2715b54f813 - deregister  status: 200
+2021-09-19 01:20:34.282  INFO [user-albums,,] 17760 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2021-09-19 01:20:34.476  INFO [user-albums,,] 17760 --- [restartedMain] com.user.albums.UserAlbumsApplication    : Starting UserAlbumsApplication using Java 15.0.1 on DESKTOP-B1IECB4 with PID 17760 (C:\Users\my\Documents\MicroServicesV2\user-albums\target\classes started by my in C:\Users\my\Documents\MicroServicesV2\user-albums)
+2021-09-19 01:20:34.476  INFO [user-albums,,] 17760 --- [restartedMain] com.user.albums.UserAlbumsApplication    : No active profile set, falling back to default profiles: default
+2021-09-19 01:20:34.763  INFO [user-albums,,] 17760 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=37e1f69d-f679-3332-bab2-fab5cf927699
+2021-09-19 01:20:34.910  INFO [user-albums,,] 17760 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-09-19 01:20:34.911  INFO [user-albums,,] 17760 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-19 01:20:34.911  INFO [user-albums,,] 17760 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-19 01:20:34.932  INFO [user-albums,,] 17760 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-19 01:20:34.932  INFO [user-albums,,] 17760 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 454 ms
+2021-09-19 01:20:35.609  WARN [user-albums,,] 17760 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect timed out; nested exception is java.net.SocketTimeoutException: Connect timed out}]
+2021-09-19 01:20:36.125  WARN [user-albums,,] 17760 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-09-19 01:20:36.194  INFO [user-albums,,] 17760 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-09-19 01:20:36.311  WARN [user-albums,,] 17760 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-09-19 01:20:36.333  INFO [user-albums,,] 17760 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-19 01:20:36.361  INFO [user-albums,,] 17760 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49282 (http) with context path ''
+2021-09-19 01:20:36.361  INFO [user-albums,,] 17760 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 49282
+2021-09-19 01:20:36.362  INFO [user-albums,,] 17760 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-09-19 01:20:36.376  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-09-19 01:20:36.377  INFO [user-albums,,] 17760 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:20:36.387  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-09-19 01:20:36.387  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-09-19 01:20:36.388  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-09-19 01:20:36.388  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-09-19 01:20:36.388  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-09-19 01:20:36.388  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-09-19 01:20:36.388  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-09-19 01:20:36.404  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-09-19 01:20:36.408  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-09-19 01:20:36.411  INFO [user-albums,,] 17760 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-09-19 01:20:36.417  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1631994636417 with initial instances count: 4
+2021-09-19 01:20:36.423  INFO [user-albums,,] 17760 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-ALBUMS with eureka with status UP
+2021-09-19 01:20:36.423  INFO [user-albums,,] 17760 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1631994636423, current=UP, previous=STARTING]
+2021-09-19 01:20:36.423  INFO [user-albums,,] 17760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-ALBUMS/user-albums:e22d40505632e804e1839867a29f0aba: registering service...
+2021-09-19 01:20:36.433  INFO [user-albums,,] 17760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-ALBUMS/user-albums:e22d40505632e804e1839867a29f0aba - registration status: 204
+2021-09-19 01:20:36.493  INFO [user-albums,,] 17760 --- [restartedMain] com.user.albums.UserAlbumsApplication    : Started UserAlbumsApplication in 2.105 seconds (JVM running for 7583.142)
+2021-09-19 01:20:36.495  INFO [user-albums,,] 17760 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-09-19 01:25:36.396  INFO [user-albums,,] 17760 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-19 01:28:12.326  INFO [user-albums,,] 17760 --- [RMI TCP Connection(148)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-09-19 01:28:12.327  INFO [user-albums,,] 17760 --- [RMI TCP Connection(148)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-ALBUMS with eureka with status DOWN
+2021-09-19 01:28:12.327  INFO [user-albums,,] 17760 --- [RMI TCP Connection(148)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1631995092327, current=DOWN, previous=UP]
+2021-09-19 01:28:12.327  INFO [user-albums,,] 17760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-ALBUMS/user-albums:e22d40505632e804e1839867a29f0aba: registering service...
+2021-09-19 01:28:13.357  INFO [user-albums,,] 17760 --- [RMI TCP Connection(148)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
